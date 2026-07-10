@@ -1,0 +1,54 @@
+# ==============================================================
+# CONFIDENTIAL DATA — never commit.
+# Participant-level experimental data is not licensed for public
+# release. All raw and cleaned data files are excluded.
+# ==============================================================
+
+# Whole data directory (raw inputs + cleaned analytic files)
+data/
+
+# Explicit data filenames (belt-and-braces, in case data/ is renamed or
+# a file is placed at the repo root by mistake)
+Data_decisions_MA_Mturk.csv
+Data_decisions_MA_Prolific.csv
+mturk_clean.csv
+prolific_clean.csv
+mturk_session.csv
+prolific_session.csv
+*_clean.csv
+participant_level_*.csv
+
+# ==============================================================
+# GENERATED OUTPUTS
+# Reproducible by re-running the notebooks. Excluded because several
+# are derived directly from confidential data (e.g. tables that could
+# expose small-cell counts). Delete these lines if your ethics
+# approval permits committing aggregate results.
+# ==============================================================
+outputs/
+
+# ==============================================================
+# Jupyter notebook checkpoints
+# ==============================================================
+.ipynb_checkpoints/
+
+# ==============================================================
+# Python
+# ==============================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+
+# ==============================================================
+# OS / editor cruft
+# ==============================================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
