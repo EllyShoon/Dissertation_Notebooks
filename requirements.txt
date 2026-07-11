@@ -1,7 +1,6 @@
 # Python dependencies for the analysis pipeline.
-# Minimum versions reflect the environment the notebooks were developed and
-# tested on. Newer patch releases are expected to work; pin exact versions
-# (== instead of >=) if you need a fully frozen environment for archival.
+# Minimum versions reflect the development/test environment. Pin exact
+# versions (== instead of >=) if you need a fully frozen archival environment.
 
 pandas>=2.0
 numpy>=1.24
@@ -11,6 +10,12 @@ patsy>=0.5.6
 pingouin>=0.5.4
 matplotlib>=3.7
 seaborn>=0.12
+
+# Notebook 07 (construct distinctiveness / factor analysis)
+factor_analyzer>=0.5.1
+# factor_analyzer 0.5.1 calls a scikit-learn internal that was removed in
+# sklearn 1.6. Pin sklearn below 1.6 so the factor analysis runs.
+scikit-learn>=1.3,<1.6
 
 # Notebook execution
 jupyter>=1.0
